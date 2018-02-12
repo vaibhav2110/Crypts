@@ -1,0 +1,61 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700');
+
+ion-content {
+    font-family: 'Source Sans Pro';
+}
+
+.bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+    background-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+.bar-button-md[icon-only] {
+    padding:10px;
+}
+
+.scroll-content {
+    padding: 0 !important;
+}
+$SIDEMENU_TOP: #41B0CB;
+$SIDEMENU_BOTTOM: #8171DE;
+$SIDEMENU_TRANSPARENCY: rgba(255,255,255,0.4);
+
+.toolbar-background-md {
+    background: -webkit-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: -o-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: -moz-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background: linear-gradient(to right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    background-repeat: repeat-x;
+}
+
+ion-item, .coinbtn {
+    margin: 5px !important;
+    color: black !important;
+}
+
+.details {
+    background-color: #102D49 !important;
+}
+
+.loading-md .loading-wrapper {
+    background:#41B0CB !important;
+    color: #C1E6FF !important;
+    text-transform: uppercase;
+    font-size:.8em;
+}

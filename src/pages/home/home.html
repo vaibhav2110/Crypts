@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons end>
+        <button class="add" icon-only (click)="showSearch()">
+          <ion-icon name="add"></ion-icon>
+        </button>
+        <button class="add" icon-only (click)="openSettings()">
+          <ion-icon name="settings"></ion-icon>
+        </button>
+      </ion-buttons>
+        
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <div class="logo">
+        <h1></h1>
+    </div>
+  
+    <ion-list *ngIf="coins && details && likedCoins && chart">
+      <ion-item-sliding *ngFor="let coin of objectKeys(coins); let i = index" (ionDrag)="swiped(i)">
+        <ion-item class="items" (click)="coinDetail(likedCoins[i], details[i])" no-lines>
+            <div class="container">
+                    
+                    <h1 class="name" style="color: azure">
+                        
+                        {{likedCoins[i]}}
+                    </h1>
+                    <h3 class="price" *ngIf="details[i]" >
+                                  {{details[i].PRICE }}
+                        <div>Price</div>
+  
+                    </h3>
+                    <h5 class="high" *ngIf="details[i]">
+                        
+                        
+                        <div>Highest</div>
+                        {{details[i].HIGHDAY}}
+                
+                </h5>
+                    <h5 style.color="{{details[i].CHANGEPCT24HOUR<0 ? '#f53d3d': '#32db64'}}" *ngIf="details[i]" class="change">  
+                        <div>Profit/Loss</div>
+                        {{details[i].CHANGE24HOUR}}
+                        
+                        
+                    </h5>
+                
+                <canvas class="graph" id="canvas{{i}}">{{ chart[i] }}</canvas>
+        </div>
+        </ion-item>
+        <ion-item-options>
+          <button ion-button (click)="removeCoin(likedCoins[i])"><ion-icon name="close" class="size"></ion-icon></button>
+        </ion-item-options>
+          
+      
+  </ion-item-sliding>
+  </ion-list>
+      
+  </ion-content>
+  

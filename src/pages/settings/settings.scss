@@ -1,0 +1,26 @@
+page-settings {
+    ion-toolbar{
+        
+        ion-buttons{
+            button{
+                font-size: 1.3em;
+            }
+        }
+    }
+    ion-item{
+        padding: 5px !important;
+        ion-label{
+            font-size: 1.2em;
+        }
+    }
+    .save{
+            width: 100%;
+            padding: 15px;
+        color: azure;
+        font-size: 1.2em;
+        font-weight: 500;
+            position: absolute;
+            bottom: 0 !important;
+            background: linear-gradient(to right, rgba(65,176,203,1), rgba(128,113,222,1)) !important;
+        }
+}

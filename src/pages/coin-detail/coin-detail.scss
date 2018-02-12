@@ -1,0 +1,108 @@
+page-coin-detail {
+    ion-content{
+        position: relative;
+    .container{
+        display: block;
+        position: relative;
+        h1{
+        text-align: center;
+        margin-top: 10px;
+            color: rgba(65,176,203,1);
+            font-weight: 600;
+    }
+        canvas{
+            position: absolute;
+            top: 35px;
+            height: 200px !important;
+            margin-right: 50px !important;
+            
+        }
+    .button-group {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 40%;
+        top: 235px;
+        z-index: 9999;
+  ion-col {
+    &:first-child:not(:last-child) {
+      padding-right: 0;
+      button {
+        background: rgba(65,176,203,0.7);
+        padding: 0 !important;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+          border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-right: 1px solid black;
+      }
+         button:active {
+            background: rgba(128,113,222,1);
+        }
+    }
+    &:not(:first-child):not(:last-child) {
+      padding-right: 0;
+      padding-left: 0;
+      button {
+        background: rgba(65,176,203,0.7);
+
+          padding: 0 !important;
+          
+        border-radius: 0;
+      }
+         button:active {
+            background: rgba(128,113,222,1);
+        }
+    }
+    &:last-child:not(:first-child) {
+        
+      padding-left: 0;
+      button {
+          background: rgba(65,176,203,0.7);
+          padding: 0 !important;
+        border-top-left-radius: 0;
+          border-left: 1px solid black;
+          border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 0;
+      }
+        button:active {
+            background: rgba(128,113,222,1);
+        }
+        
+    }
+  }
+    }
+    }
+    .content{
+        position: relative;
+        display: block;
+        margin-top: 70%;
+        top: 10%;
+        bottom:2px;
+        ion-item{
+            width: 96% !important;
+            margin-left: 2% !important;
+            margin-right: 2% !important;
+            height: 40px !important;
+            border-radius: 2px !important;
+            margin-bottom: 15px !important;
+            background: linear-gradient(to right, rgba(65,176,203,1), rgba(128,113,222,1)) !important;
+            box-shadow: 0 8px 6px -6px grey !important;
+            p{
+                margin-left: 15px;
+                float: left;
+                color: azure;
+            }
+            h2{
+                float: right;
+                color: floralwhite;
+                font-size: 1.1em;
+                font-weight: 600;
+                margin-right: 15px;
+            }
+        }
+    }
+
+}
+}
