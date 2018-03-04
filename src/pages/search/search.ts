@@ -47,7 +47,7 @@ export class SearchPage {
         })
     });
   }
-    
+   
   addCoin(coin) {
     this.storage.remove('likedCoins');
       if(this.likedCoins.indexOf(coin)<0){

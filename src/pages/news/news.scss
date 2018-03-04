@@ -1,0 +1,76 @@
+page-news {
+    ion-spinner{
+        position: absolute;
+        left: 50%;
+        text-align: center;
+    }
+    ion-slides{
+        height: 170px;
+        width: 110% !important;
+        margin-top: 0px;
+        padding-left: 0 !important;
+        margin-left: -10px;
+        ion-slide{
+            ion-card{
+                width: 100% !important;
+                position: relative;
+                h1{
+                    color: white !important;
+                    font-size: 1.3em !important;
+                    position: absolute !important;
+                    top: 50% !important;
+                    width: 80%;
+                    left: 5%;
+                    right: 5%;
+                    font-weight: 600 !important;
+                    z-index: 999 !important;
+                    vertical-align: middle !important;
+                    text-align: left;
+                    text-shadow: 1px 1px 2px black;
+                }
+                img{
+                    width: 100% !important;
+                    -webkit-filter: blur(2px);
+                    
+                }
+            }
+        }
+    }
+    .news{
+        ion-card{
+            top: 10px;
+            position: relative;
+            height: 100px;
+            background: #ffffff;
+            img{
+                width: 30%;
+                height: 100%;
+                position: absolute;
+                float: right;
+                
+            }
+            h3{
+               float: left;
+                margin-left: 35%;
+                margin-right: 2%;
+                margin-top: 8px;
+                height: 40px;
+                font-size: 1em;
+                line-height: inherit;
+                font-weight: 500;
+            }
+            p{
+                padding-bottom: 0px;
+                position: absolute;
+                float: left;
+                margin-left: 35%;
+                bottom: 5px;
+                color: grey;
+                font-size: 0.8em;
+                span{
+                    color: black;
+                }
+            }
+        }
+    }
+}

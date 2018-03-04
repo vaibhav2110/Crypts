@@ -65,6 +65,10 @@ export class DataProvider {
     const endpoint = `pricemultifull?fsyms=${coins.join()}&tsyms=${this.currency}`;
     return this.get(endpoint);
   }
+    
+    getNews(){
+    return this.get("news/?lang=EN");
+    }
 
   getChart(coin: string) {
     return this.get(`histoday?fsym=${coin}&tsym=${this.currency}&limit=30&aggregate=1`);

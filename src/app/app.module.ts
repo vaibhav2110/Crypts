@@ -7,16 +7,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SettingsPage } from '../pages/settings/settings';
+import { NewsPage } from '../pages/news/news';
 import { SearchPage } from '../pages/search/search';
 import { DataProvider } from '../providers/data/data';
 import { IonicStorageModule } from '@ionic/storage';
 import { AdMobFree } from '@ionic-native/admob-free';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     SearchPage,
-      SettingsPage
+      SettingsPage,
+      NewsPage
   ],
   imports: [
     BrowserModule,
@@ -29,14 +32,18 @@ import { AdMobFree } from '@ionic-native/admob-free';
     MyApp,
     HomePage,
     SearchPage,
+      NewsPage,
       SettingsPage
+      
+      
   ],
   providers: [
     StatusBar,
       AdMobFree,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    DataProvider
+    DataProvider,
+      InAppBrowser
   ]
 })
 export class AppModule {}

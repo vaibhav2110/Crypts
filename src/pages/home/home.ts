@@ -7,6 +7,7 @@ import { LoadingController } from 'ionic-angular';
 import { SearchPage } from '../search/search';
 import { CoinDetailPage } from '../coin-detail/coin-detail';
 import { SettingsPage } from '../settings/settings';
+import { NewsPage } from '../news/news';
 import { AdMobFree, AdMobFreeBannerConfig } from '@ionic-native/admob-free';
 
 @Component({
@@ -496,4 +497,7 @@ openSettings(){
   showSearch() {
     this.navCtrl.push(SearchPage);
   }
+    showNews(){
+        this.navCtrl.push(NewsPage);
+    }
 }

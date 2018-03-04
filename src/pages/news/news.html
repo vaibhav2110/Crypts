@@ -1,0 +1,42 @@
+<!--
+  Generated template for the NewsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>News</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-spinner name="bubbles" [hidden]="slides && slides.length">
+        
+    </ion-spinner>
+    <ion-slides *ngIf="slides && slides.length" autoplay="5000" loop="true" speed="1000">
+        
+        <ion-slide  *ngFor="let items of slides" (click)="openFeeds(items.url)" >
+            <ion-card>
+                <img src={{items.imageurl}}>
+                <h1>{{items.title}}</h1>
+                
+            </ion-card>
+        </ion-slide>
+    </ion-slides>
+    <div class="news" *ngIf="new">
+		<ion-card  *ngFor="let nitems of new" (click)="openFeeds(nitems.url)">
+				
+           <img src={{nitems.imageurl}}>
+				
+                    
+           <h3>{{nitems.title}}</h3>
+            <p>{{nitems.published_on * 1000 | date:'MMMM d, y'}} by <span>{{nitems.source}}</span></p>
+            
+		</ion-card>
+	</div>
+
+</ion-content>
